@@ -1,0 +1,21 @@
+﻿@model IEnumerable<aspdotnet_controller_test.Controllers.Person>
+@{ Layout = "_Layout"; }
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var p in Model)
+        {
+            <tr>
+                <td>@p.Id</td>
+                <td>@p.Name</td>
+            </tr>
+        }
+        </tbody>
+</table>
+

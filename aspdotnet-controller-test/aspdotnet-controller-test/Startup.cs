@@ -18,6 +18,7 @@ namespace aspdotnet_controller_test
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddMvc();
             services.AddSingleton<IPersonService, PersonService>();
         }
 
@@ -31,9 +32,15 @@ namespace aspdotnet_controller_test
 
             app.UseRouting();
 
+            app.UseStaticFiles();
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Home}/{action=Index}/{id?}"
+                );
             });
         }
     }

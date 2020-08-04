@@ -1,0 +1,10 @@
+﻿@model aspdotnet_controller_test.Controllers.Person
+@{ Layout = "_Layout"; }
+
+    <form asp-controller="PersonUi" asp-action="Add" method="post" class="mx-5">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" id="name" asp-for="@Model.Name">
+        </div>
+        <button type="submit" class="btn btn-primary">Add person</button>
+    </form>

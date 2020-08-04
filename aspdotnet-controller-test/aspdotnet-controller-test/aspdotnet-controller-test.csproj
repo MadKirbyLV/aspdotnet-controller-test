@@ -5,4 +5,8 @@
     <RootNamespace>aspdotnet_controller_test</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
 </Project>
